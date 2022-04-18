@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="proba.css">
+
+</head>
+
+
+<body>
+  <svg class="ell" id="ellipse">
+    <ellipse cx="100" cy="80" rx="100" ry="50" />
+  </svg>
+  <script>
+    ellipse.onmousedown = function (event) {
+      let shiftX = event.clientX - ellipse.getBoundingClientRect().left;
+      let shiftY = event.clientY - ellipse.getBoundingClientRect().top;
+      ellipse.style.position = 'absolute';
+      moveAt(event.pageX, event.pageY);
+      function moveAt(pageX, pageY) {
+        ellipse.style.left = pageX - shiftX + 'px';
+        ellipse.style.top = pageY - shiftY + 'px';
+      }
+      function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+        if (!elemBelow) return;
+        let droppableBelow = elemBelow.closest('.droppable');
+        if (currentDroppable != droppableBelow) {
+          if (currentDroppable) {
+            leaveDroppable(currentDroppable);
+          }
+          currentDroppable = droppableBelow;
+          if (currentDroppable) {
+            enterDroppable(currentDroppable);
+          }
+        }
+      }
+      document.addEventListener('mousemove', onMouseMove);
+      ellipse.onmouseup = function () {
+        document.removeEventListener('mousemove', onMouseMove);
+        ellipse.onmouseup = null;
+      };
+      document.addEventListener("click", function () {
+        {
+          if (ellipse.style.fill == "red") {
+
+            ellipse.style.fill = "blue";
+          }
+          else {
+            ellipse.style.fill = "blue";
+          }
+        }
+      });
+      document.addEventListener("dblclick", function () {
+        {
+          if (ellipse.style.fill == "blue") {
+            ellipse.style.fill = "green";
+          }
+          else {
+            ellipse.style.fill = "green";
+          }
+        }
+      });
+      document.addEventListener("dblclick", function () {
+        {
+          if (ellipse.style.fill == "green") {
+            ellipse.style.fill = "green";
+          }
+          else {
+            ellipse.style.fill = "green";
+          }
+        }
+      });
+    };
+    (function () {
+      let ell = document.getElementsByClassName('ell');
+      for (let i = 0; i < ell.length; i++) {
+        ell[i].addEventListener('click', function () {
+          setTimeout(function () {
+            ell[i].style.fill = 'red';
+          }, 5000);
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>
