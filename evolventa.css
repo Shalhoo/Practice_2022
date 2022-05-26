@@ -214,7 +214,7 @@ header .menu {
   top: 510px;
 }
 
-.hiddenTools .baseCircBa, .hiddenTools .blankStorage, .hiddenTools .blankStorageDone, .hiddenTools .blankStorageDoneSmall, .hiddenTools .rul {
+.hiddenTools .baseCircBa, .hiddenTools .blankStorage, .hiddenTools .blankStorageDone, .hiddenTools .blankStorageDoneSmall {
   display: none;
 }
 
