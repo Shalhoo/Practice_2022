@@ -1,4 +1,7 @@
-//Установление параметров для нарезки диска d и m
+//
+//______________________________Установление параметров для нарезки диска d и m по нажанию на кнопку_________________________________
+//
+document.querySelector("#createButt").onclick = function() {
 const dParam = prompt('Укажите диаметр диска в диапазое от 130 до 230', 230)
     if (dParam >= 130 && dParam <= 230 && dParam / 10) {
      	document.querySelector('#dParam').textContent = dParam;
@@ -19,4 +22,27 @@ const dParam = prompt('Укажите диаметр диска в диапаз�
     	dParam
     	mParam
     } 
-    
+}
+
+//
+// _______________________________Окно краткого руководства_____________________________
+//
+const manualBtn = $('.manual-btn'),
+      manual    = $('.manual');
+
+manualBtn.on('click', function() {
+    if ( $(this).hasClass('is-active') ) {
+        $(this).removeClass('is-active')
+        manual.slideUp()
+    } else {
+        $(this).addClass('is-active')
+        manual.slideDown()
+    }
+});
+
+$(document).click(function (e) {
+    if ( !manualBtn.is(e.target) && !manual.is(e.target) && manual.has(e.target).length === 0) {
+        manual.slideUp()
+        manualBtn.removeClass('is-active')
+    }
+})
