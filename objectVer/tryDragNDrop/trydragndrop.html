@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="try.css">
+	<title>Evolventa</title>
+</head>
+<body>
+	
+	<section>
+		<section class="machine">
+			<div class="hiddenRectMain"></div>
+			<object type="image/svg+xml" data="img/baseCirc.svg" class="machine-basicCirc basicCirc" id="machine-basicCirc" style="margin-top: 30px;"></object>
+			<object type="image/svg+xml" data="img/lever.svg" class="machine-lever lever" id="machine-lever"></object>
+			<object type="image/svg+xml" data="img/pedal.svg" class="machine-pedal pedal" id="machine-pedal"></object>
+		</section>
+		<section class="toolsStand">
+			<object type="image/svg+xml" data="img/shelter.svg" class="toolsStand-shelter" id="toolsStand-shelter"></object>
+			<object type="image/svg+xml" data="img/blankStorageAtt.svg" class="toolsStand-blankStorageAtt blankStorageAtt" id="toolsStand-blankStorageAtt"></object>
+			<object type="image/svg+xml" data="img/garbage.svg" class="toolsStand-garbage" id="toolsStand-garbage"></object>
+			<object type="image/svg+xml" data="img/ruler.svg" class="toolsStand-ruler ruler" id="toolsStand-ruler"></object>
+			<div class="hiddenBlock">
+				<div class="hiddenRect1">
+					<img src="img/hiddenRect.svg" alt="" class="backRect" id="backRect">
+					<img src="img/hiddenRect.svg" alt="" class="backRect" id="backRect">
+					<img src="img/hiddenRect.svg" alt="" class="backRect" id="backRect">
+					<img src="img/hiddenRect.svg" alt="" class="backRect" id="backRect">
+				</div>
+				<div class="hiddenRect1">
+					<img src="img/hiddenRect.svg" alt="" class="backRect" id="backRect">
+					<img src="img/hiddenRect.svg" alt="" class="backRect" id="backRect">
+					<img src="img/hiddenRect.svg" alt="" class="backRect" id="backRect">
+					<img src="img/hiddenRect.svg" alt="" class="backRect" id="backRect">
+				</div>
+			</div>
+		</section>
+	</section>
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="dragNDrop.js"></script>
+	<script src="ruler.js"></script>
+</body>
+</html>
+
+<!-- В CSS ДОБАВЛЕНЫ Z-INDEX ДЛЯ СТАТИЧНЫХ ПАРАМЕТРОВ done
+	HIDDEN TOOLS УДАЛИТЬ СО СТРАНИЦЫ ПРОЕКТА И ПЕРЕРИСОВЫВАТЬ КАЖДЫЙ РАЗ, done
+	СОХРАНЯЯ НА ЭЛЕМЕНТЕ ИНФОРМЦИЮ ПО ЭВОЛЬВЕНТЕ
+	TEST SHORT VERSION OF DRAG N DROP
+	cursor: move; курсор перемещения-->

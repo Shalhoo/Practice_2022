@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="evolventa.css">
+	<title>Evolventa</title>
+</head>
+<body>
+	<header>
+		<div class="menu">
+			<img src="svg/mati.svg" alt="mati">
+			<h1>Построение эвольвентных профилей <br> зубчатых колес методом огибания.</h1>
+		</div>
+	</header>
+	<section class="shortManual">
+	<button class="manual-btn" id="manual-btn">Скрыть/развернуть краткое руководство</button>
+		<div class="manual">
+		    <ul>
+		        <li>Диапазон возможных значений для нарезки деталей может принимать значения для <u>диаметра(d) от 130 до 230, для модуля(m) от 13 до 23</u></li>
+		        <li><u>По клику на элементы и перемещению левой кнопкой мыши</u> вы можете их <u>размещать</u> на диске для нарезки, <u>выбрасывать</u> неудавшийся эксперимент или же <u>размещать на полке с экземплярами</u> так же по нажатию на них</li>
+		        <li>Для начала нарезки эвольвенты нажмите на <b>рычаг</b> нужное количество раз</li>
+		        <li>Для возвращения зубьев в исходное положение необходимо нажать на <b>педаль</b> нужное количество раз</li>
+		        <li>Вы можете передвигать зубья вверх и вниз, ориентируясь боковые линейки</li>
+		        <li>Для перезапуска всего проекта обновите страницу, <b style="color: red">НО</b> будьте аккуратны, все ранее поставленные эксперименты будут утеряны</li>
+		    </ul>
+		</div>
+	</section>
+	<section>
+		<button type="button" class="createButt" id="createButt" width="144" height="34">Установить параметры</button>
+		<div class="setParam">
+			<p>
+				d= <span id="dParam"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m= <span id="mParam"></span>
+			</p>
+		</div>
+		<section class="machine">
+			<object type="image/svg+xml" data="svg/stand.svg" class="machine-stand" id="machine-stand"></object>
+			<object type="image/svg+xml" data="svg/baseCirc.svg" class="machine-basicCirc basicCirc" id="machine-basicCirc"></object>
+			<object type="image/svg+xml" data="svg/bolt.svg" class="machine-bolt2" id="machine-bolt2"></object>
+			<object type="image/svg+xml" data="svg/bolt.svg" class="machine-bolt1" id="machine-bolt1"></object>
+			<object type="image/svg+xml" data="svg/bolt.svg" class="machine-bolt2" id="machine-bolt2"></object>	
+			<object type="image/svg+xml" data="svg/lever.svg" class="machine-lever lever" id="machine-lever"></object>	
+			<object type="image/svg+xml" data="svg/pedal.svg" class="machine-pedal pedal" id="machine-pedal"></object>
+			<object type="image/svg+xml" data="svg/smallRulLeft.svg" class="machine-smallRulLeft" id="machine-smallRulLeft"></object>
+			<object type="image/svg+xml" data="svg/smallRulRight.svg" class="machine-smallRulRight" id="machine-smallRulRight"></object>
+			<object type="image/svg+xml" data="svg/standLeft.svg" class="machine-standLeft" id="machine-standLeft"></object>
+			<object type="image/svg+xml" data="svg/standRight.svg" class="machine-standRight" id="machine-standRight"></object>
+			<object type="image/svg+xml" data="svg/line.svg" class="machine-line line" id="machine-line line"></object>
+		</section>
+		<section class="toolsStand">
+			<object type="image/svg+xml" data="svg/shelter.svg" class="toolsStand-shelter" id="toolsStand-shelter"></object>
+			<object type="image/svg+xml" data="svg/blankStorageAtt.svg" class="toolsStand-blankStorageAtt blankStorageAtt" id="toolsStand-blankStorageAtt"></object>
+			<object type="image/svg+xml" data="svg/garbage.svg" class="toolsStand-garbage" id="toolsStand-garbage"></object>
+			<object type="image/svg+xml" data="svg/ruler.svg" class="toolsStand-ruler ruler" id="toolsStand-ruler"></object>
+		</section>
+	</section>
+	<!--<section class="hiddenTools" id="hiddenTools">
+		<img src="svg/baseCircBa.svg" alt="" class="baseCircBa" id="baseCircBa">
+		<img src="svg/blankStorage.svg" alt="" class="blankStorage" id="blankStorage">
+		<img src="svg/blankStorageDone.svg" alt="" class="blankStorageDone" id="blankStorageDone">
+		<img src="svg/blankStorageDoneSmall.svg" alt="" class="blankStorageDoneSmall" id="blankStorageDoneSmall">
+	</section>-->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/dragNDrop.js"></script>
+	<script src="js/evolventa.js"></script>
+	<script src="js/ruler.js"></script>
+	<!--<script src="js/button.js"></script>
+	<script src="js/frameVisible.js"></script>
+	<script src="js/lever.js"></script>
+	<script src="js/pedal.js"></script>-->
+</body>
+</html>
