@@ -107,24 +107,17 @@ header {
 		&:hover {
 			background-color: #A8F3F3;
 		}
-	cursor: pointer;
 }
 .setParam {
 	margin-top: 5px; 
 	margin-left: 60px;
 }
 $machine: (
-  stand: (absolute, 227px, 271px, 10),
-  basicCirc: (absolute, 301px, 178px,20),
-  bolt1: (absolute, 284px, 448px, 15),
-  bolt2: (absolute, 494px, 448px, 15),
+  fullStand: (absolute, 227px, 178px, 10),
+  fullLine: (absolute, 178px, 374px, 15),
   lever: (absolute, 565px, 293px, 20),
   pedal: (absolute, 200px, 517px, 5),
-  smallRulLeft: (absolute, 229px, 416px, 20),
-  smallRulRight: (absolute, 573px, 416px, 20),
-  standLeft: (absolute, 177px, 374px, 20),
-  standRight: (absolute, 598px, 374px, 20),
-  line: (relative, 256px, 267px, 20)
+  line: (relative, 258px, 267px, 20)
 );
 
 .machine {
@@ -142,16 +135,18 @@ $machine: (
       z-index: $z-index;
 	}
   }
-
-basicCirc {
+.hiddenRectMain {
+	opacity: 1;
+}
+.basicCirc {
 	opacity: .7;
 }
 }
 $toolsStand: (
-  shelter: (absolute, 750px, 341px),
-  blankStorageAtt: (absolute, 750px, 294px),
-  garbage: (absolute, 919px, 276px),
-  ruler: (absolute, 750px, 510px),
+  shelter: (absolute, 750px, 341px, 5),
+  blankStorageAtt: (absolute, 750px, 294px, 5),
+  garbage: (absolute, 919px, 276px, 5),
+  ruler: (absolute, 750px, 510px, 30),
 );
 
 .toolsStand {
@@ -160,23 +155,17 @@ $toolsStand: (
     $position: nth($val, 1);
     $left: nth($val, 2);
     $top: nth($val, 3);
-     
+    $z-index: nth($val, 4);
+
     &-#{$name} {
       position: $position;
       left: $left;
       top: $top;
+      z-index: $z-index;
 	}
   }
 }
 
-.hiddenTools {
-	.baseCircBa, .blankStorage, .blankStorageDone, .blankStorageDoneSmall 
-	{
-		display: none;
+.poi {
+		cursor: pointer;
 	}
-}
-
-.line, .lever, .pedal, .blankStorageAtt, .ruler, .blankStorage, 
-.baseCircBa, .blankStorageDone, .blankStorageDoneSmall, .manual-btn {
-	cursor: pointer;
-}

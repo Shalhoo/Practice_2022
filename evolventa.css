@@ -112,7 +112,6 @@ header .menu {
   display: inline-block;
   font-family: "Alice";
   font-size: 16px;
-  cursor: pointer;
 }
 .createButt:hover {
   background-color: #A8F3F3;
@@ -123,28 +122,16 @@ header .menu {
   margin-left: 60px;
 }
 
-.machine-stand {
+.machine-fullStand {
   position: absolute;
   left: 227px;
-  top: 271px;
+  top: 178px;
   z-index: 10;
 }
-.machine-basicCirc {
+.machine-fullLine {
   position: absolute;
-  left: 301px;
-  top: 178px;
-  z-index: 20;
-}
-.machine-bolt1 {
-  position: absolute;
-  left: 284px;
-  top: 448px;
-  z-index: 15;
-}
-.machine-bolt2 {
-  position: absolute;
-  left: 494px;
-  top: 448px;
+  left: 178px;
+  top: 374px;
   z-index: 15;
 }
 .machine-lever {
@@ -159,37 +146,16 @@ header .menu {
   top: 517px;
   z-index: 5;
 }
-.machine-smallRulLeft {
-  position: absolute;
-  left: 229px;
-  top: 416px;
-  z-index: 20;
-}
-.machine-smallRulRight {
-  position: absolute;
-  left: 573px;
-  top: 416px;
-  z-index: 20;
-}
-.machine-standLeft {
-  position: absolute;
-  left: 177px;
-  top: 374px;
-  z-index: 20;
-}
-.machine-standRight {
-  position: absolute;
-  left: 598px;
-  top: 374px;
-  z-index: 20;
-}
 .machine-line {
   position: relative;
-  left: 256px;
+  left: 258px;
   top: 267px;
   z-index: 20;
 }
-.machine basicCirc {
+.machine .hiddenRectMain {
+  opacity: 1;
+}
+.machine .basicCirc {
   opacity: 0.7;
 }
 
@@ -197,28 +163,30 @@ header .menu {
   position: absolute;
   left: 750px;
   top: 341px;
+  z-index: 5;
 }
 .toolsStand-blankStorageAtt {
   position: absolute;
   left: 750px;
   top: 294px;
+  z-index: 5;
 }
-.toolsStand-garbage {
+.toolsStand_garbage {
   position: absolute;
   left: 919px;
   top: 276px;
+  z-index: 5;
+  cursor: pointer;
 }
 .toolsStand-ruler {
   position: absolute;
   left: 750px;
   top: 510px;
+  z-index: 30;
 }
 
-.hiddenTools .baseCircBa, .hiddenTools .blankStorage, .hiddenTools .blankStorageDone, .hiddenTools .blankStorageDoneSmall {
-  display: none;
-}
 
-.line, .lever, .pedal, .blankStorageAtt, .ruler, .blankStorage,
-.baseCircBa, .blankStorageDone, .blankStorageDoneSmall, .manual-btn {
+
+.poi {
   cursor: pointer;
 }
