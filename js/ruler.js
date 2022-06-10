@@ -1,4 +1,4 @@
-const ruler = document.getElementById('toolsStand-ruler')
+const ruler = document.querySelector('.toolsStand-ruler')
 ruler.onmousedown = function(event) {
 
   ruler.style.position = 'absolute'
