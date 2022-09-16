@@ -17,7 +17,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
+  vertical-align: basemachine-line;
 }
 
 article, aside, details, figcaption,
@@ -132,25 +132,24 @@ header .menu {
   position: absolute;
   left: 178px;
   top: 374px;
-  z-index: 15;
+  z-index: 1500;
 }
 .machine-lever {
   position: absolute;
   left: 565px;
   top: 293px;
-  z-index: 20;
+  z-index: 110;
 }
 .machine-pedal {
   position: absolute;
   left: 200px;
   top: 517px;
-  z-index: 5;
+  z-index: 4;
 }
 .machine-line {
-  position: relative;
+  position: absolute;
   left: 258px;
   top: 267px;
-  z-index: 20;
 }
 .machine .hiddenRectMain {
   opacity: 1;
@@ -184,9 +183,14 @@ header .menu {
   top: 510px;
   z-index: 30;
 }
-
-
-
 .poi {
   cursor: pointer;
+}
+.ggg {
+position: relative;
+}
+#keke {
+  position: absolute;
+  top: 178px;
+  left: 218px;
 }
